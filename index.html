@@ -13,6 +13,7 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
+
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
@@ -26,16 +27,22 @@ https://templatemo.com/tm-591-villa-agency
   </head>
 
 <body>
-  <div class="full_screen">
+  <div class="full_screen overflow-hidden">
     <!-- start the navbar section -->
     <header class="">
       <div class="container-md text-white d-flex align-items-center gap-4 justify-content-between">
-        <a href="/" class="site_logo">Exclusive</a>
-        <ul  class="d-none d-sm-flex navlinks align-items-center ">
-          <li class="navlink"><a href="#">Home</a></li>
-          <li class="navlink"><a href="#">Contact</a></li>
-          <li class="navlink"><a href="#">About</a></li>
-          <li class="navlink"><a href="#">Sign Up</a></li>
+        <div class="d-flex align-items-center gap-2">
+          <a class="d-sm-none" href="#">
+            <img src="./assets/images/mobilmenu.svg" alt="">
+          </a>
+          <a href="index.html" class="site_logo">Exclusive</a>
+        </div>
+
+ <ul  class=" d-sm-flex navlinks align-items-center ">
+          <li class="navlink active"><a href="index.html">Home</a></li>
+          <li class="navlink"><a href="contect.html">Contact</a></li>
+          <li class="navlink"><a href="ourstory.html">About</a></li>
+          <li class="navlink"><a href="register.html">Sign Up</a></li>
         </ul>
         <div class="d-flex align-items-center gap-2">
           <div class="input-group d-none d-lg-flex position-relative ">
@@ -47,14 +54,14 @@ https://templatemo.com/tm-591-villa-agency
           <a href="#" class="d-block d-lg-none">
             <img src="./assets/images/Component 2.svg" style="width: 1.5rem;height: 1.5rem;" alt="">
           </a>
-          <a href="#">
+          <a href="cart.html">
             <img src="./assets/images/Cart1.svg" alt="">
           </a>
-          <a href="#">
+          <a href="wishlist.html">
             <img src="./assets/images/Wishlist.svg" alt="">
           </a>
-          <a class="d-sm-none" href="#">
-            <img src="./assets/images/mobilmenu.svg" alt="">
+          <a href="login.html">
+            <img src="./assets/images/icon-user.svg" alt="">
           </a>
         </div>
       </div>
@@ -62,7 +69,7 @@ https://templatemo.com/tm-591-villa-agency
     <!-- end the navbar section -->
 
     <!-- start the hero section -->
-    <div class="container-md mx-auto row">
+    <main class="container-md mx-auto row">
       <ul class="category_menu col-12 col-sm-3">
         <li class="category_link d-flex align-items-center justify-content-between">Woman’s Fashion
           <img src="./assets/images/DropDown.svg" style="width: 1.5rem;
@@ -104,7 +111,7 @@ https://templatemo.com/tm-591-villa-agency
       </div>
       </div>
   
-    </div>
+    </main>
     <!-- end the hero section -->
   </div>
   <!-- start the product section -->
@@ -268,32 +275,8 @@ https://templatemo.com/tm-591-villa-agency
         </div>
   
       </div>
-      <div style="gap: 1.88rem;" class="boxs_container">
-        <div class="category_box">
-          <img src="./assets/images/Category-CellPhone.svg" class="category_img" alt="">
-          <p class="Regular_Title">Phones</p>
-        </div>
-        <div class="category_box">
-          <img src="./assets/images/Category-CellPhone.svg" class="category_img" alt="">
-          <p class="Regular_Title">Phones</p>
-        </div>
-        <div class="category_box">
-          <img src="./assets/images/Category-CellPhone.svg" class="category_img" alt="">
-          <p class="Regular_Title">Phones</p>
-        </div>
-        <div class="category_box">
-          <img src="./assets/images/Category-CellPhone.svg" class="category_img" alt="">
-          <p class="Regular_Title">Phones</p>
-        </div>
-        <div class="category_box">
-          <img src="./assets/images/Category-CellPhone.svg" class="category_img" alt="">
-          <p class="Regular_Title">Phones</p>
-        </div>
-        <div class="category_box">
-          <img src="./assets/images/Category-CellPhone.svg" class="category_img" alt="">
-          <p class="Regular_Title">Phones</p>
-        </div>
-  
+      <div style="gap: 1.88rem;" id="category_section" class="boxs_container">
+        <!-- will display with js  -->  
       </div>
       <hr class="line">
     </div>
@@ -424,7 +407,7 @@ https://templatemo.com/tm-591-villa-agency
   </div>
 
     <!-- start the Enhance Experience section -->
-    <div class="full_screen custem_container ">
+    <div class="full_screen container">
       <div style="min-height: 21.5rem;" class="col bg-black w-100 ">
         <div class="d-flex align-items-center justify-content-center flex-wrap   position-relative gap-4  h-100 p-2 px-md-5 py-md-3">
           <div class="Experience_content text-white text-center text-lg-start">
@@ -456,7 +439,7 @@ https://templatemo.com/tm-591-villa-agency
         </div>
         </div>
             <!-- start the benfites section -->
-    <div class="benfites-container custem_container">
+    <div class="benfites-container container">
       <div class="benfite-card">
         <img src="./assets/images/benfites-imges/dilivery.svg" class="benfite-img" alt="">
         <h3 class="benfite-titel Heading_Bold">FREE AND FAST DELIVERY</h3>
@@ -489,50 +472,52 @@ https://templatemo.com/tm-591-villa-agency
         </div>
         <h1 style="margin-top: 1.5rem;" class="Heading_SemiBold">New Arrival</h1>
         <div class="row">
-          <div class="col-6">
+          <div class="col-lg-6">
             <div class="left_content">
-              <div style="height: 37.5rem;" class="thub bg-black ">
+              <div style="height: 37.5rem;" class="thub center-grid  bg-black ">
                 <div class="inner_content">
                   <h1 class="Heading_SemiBold">PlayStation 5</h1>
                   <p class="Regular_Title product_discrption">Black and White version of the PS5 coming out on sale.</p>
                   <p class="Title_medium text-decoration-underline">Shop Now</p>
                 </div>
-                <img src="./assets/images/ps5-slim-goedkope-playstation_large 1.png" alt="">
+                <img style="max-width:31.9375rem;" src="./assets/images/ps5-slim-goedkope-playstation_large 1.png" alt="">
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-lg-6">
             <div class="right_content">
               <div class="row">
                 <div class="col-12">
-                  <div style="height: 17.75rem;" class="thub bg-black ">
-                    <div class="inner_content">
+                  <div style="height: 17.75rem;margin-bottom: 2rem;" class="thub bg-black col-12" >
+                    <div class="inner_content z-2">
                       <h1 class="Heading_SemiBold">Women’s Collections</h1>
                       <p class="Regular_Title product_discrption">Featured woman collections that give you another vibe.</p>
                       <p class="Title_medium text-decoration-underline">Shop Now</p>
                     </div>
-                    <img style="" src="./assets/images/attractive-woman-wearing-hat-posing-black-background 1.png" alt="">
+                    <img style="right: 0;" class="h-100 w-75 position-absolute z-1" src="./assets/images/attractive-woman-wearing-hat-posing-black-background 1.png" alt="">
                   </div>
-                </div>
-                <div style="gap: 1.88rem;" class="d-flex align-items-center justify-content-between">
-                  <div style="height: 17.75rem; flex: 1;" class="thub bg-black">
-                    <div class="inner_content">
-                      <h1 class="Heading_SemiBold">Speakers</h1>
-                      <p class="Regular_Title product_discrption">Amazon wireless speakers</p>
-                      <p class="Title_medium text-decoration-underline">Shop Now</p>
-                    </div>
-                    <img class="img-fluid" style="width: 11.875rem;
-                    height: 13.8125rem;"  src="./assets/images/69-694768_amazon-echo-png-clipart-transparent-amazon-echo-png 1.png" alt="">
-                </div>
-                  <div style="height: 17.75rem; flex: 1;"  class="thub bg-black">
-                    <div class="inner_content">
-                      <h1 class="Heading_SemiBold">Perfume</h1>
-                      <p class="Regular_Title product_discrption">GUCCI INTENSE OUD EDP</p>
-                      <p class="Title_medium text-decoration-underline">Shop Now</p>
-                    </div>
-                    <img style="width: 11.875rem;
-                    height: 13.8125rem;" class="img-fluid" src="./assets/images/652e82cd70aa6522dd785109a455904c.png" alt="">
-                </div>
+                  <div style="gap: 1.88rem;" class="d-flex align-items-center flex-column flex-sm-row justify-content-center justify-content-md-between">
+                    <div style="height: 17.75rem;flex: 1;" class="thub center-grid bg-black w-100 p-3" >
+                      <div class="light-shadow position-absolute w-100 h-100"></div>
+                      <div class="inner_content">
+                        <h1 class="Heading_SemiBold">Speakers</h1>
+                        <p class="Regular_Title product_discrption">Amazon wireless speakers</p>
+                        <p class="Title_medium text-decoration-underline">Shop Now</p>
+                      </div>
+                      <img class="img-fluid" style="width: 11.875rem;
+                      height: 13.8125rem;"  src="./assets/images/69-694768_amazon-echo-png-clipart-transparent-amazon-echo-png 1.png" alt="">
+                  </div>
+                    <div style="height: 17.75rem;flex: 1;"   class="thub center-grid bg-black w-100 p-3" >
+                      <div class="light-shadow position-absolute w-100 h-100"></div>
+                      <div class="inner_content">
+                        <h1 class="Heading_SemiBold">Perfume</h1>
+                        <p class="Regular_Title product_discrption">GUCCI INTENSE OUD EDP</p>
+                        <p class="Title_medium text-decoration-underline">Shop Now</p>
+                      </div>
+                      <img style="width: 11.875rem;
+                      height: 13.8125rem;" class="img-fluid" src="./assets/images/652e82cd70aa6522dd785109a455904c.png" alt="">
+                  </div>
+                  </div>
                 </div>
               </div>
               <div>
@@ -543,9 +528,6 @@ https://templatemo.com/tm-591-villa-agency
 
         </div>
       </section>
-      <div class="w-full text-center">
-        <button class="btn primery_button">View All Products</button>
-      </div>
       <hr class="line">
     </div> 
     <!-- end the New Arrival section -->
@@ -675,9 +657,7 @@ https://templatemo.com/tm-591-villa-agency
       <!-- Copyright -->
     </footer>
     <!-- end footer section -->
-
-
-
+<script src="./assets/js/displaycatogray.js"></script>
   <!-- <div class="app_background">
     <div class="container-sm app_container">
       <div class="box">

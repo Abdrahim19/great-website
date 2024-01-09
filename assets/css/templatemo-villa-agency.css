@@ -136,11 +136,11 @@ body {
 }
 
 
-.custem_container {
+/* .container  {
   min-width: 80%;
   margin-inline: auto;
   padding-inline: 1rem;
-}
+} */
 .full_screen {
   min-height: 100vh;
 }
@@ -176,7 +176,6 @@ color: white;
 } 
 .boxs_container {
   display: grid;
-  align-items: center;
   grid-template-columns: repeat(auto-fit , minmax(min(150px , 100%) , 1fr));
 }
 .light-shadow {
@@ -343,11 +342,28 @@ letter-spacing: 0.045rem;
 .navlinks {
   gap: 1rem;
 }
+@media (max-width:768px) {
+  .navlinks {
+    position: fixed;
+    top: -25.88rem;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    transition: all;
+    left: 0;
+  }
+  .navlinks.show {
+    top: 5.88rem; 
+  }
+  .navlinks .navlink {
+    margin: 2rem 1rem;
+    display: block;
+  }
+}
 @media (min-width:576px) {
   .navlinks {
     gap: 3rem;
   }
-  
 }
 .navlinks .navlink a {
   color: var(--Text2);
@@ -355,7 +371,29 @@ font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: 1.5rem; /* 150% */
+position: relative;
 }
+.navlinks .navlink a::after {
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0%;
+height: 1px;
+background-color: black;
+transition: .5s;
+}
+.navlinks .navlink:hover a::after,
+.navlinks .navlink.active a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  
+  }
 
 .category_menu .category_link {
   color: var(--Text2, #000);
@@ -429,6 +467,16 @@ opacity: 0.5;
 
 }
 
+.aftersoudo-element::after {
+  content: '*';
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: var(--commen_red);
+}
+
 .circle.active {
 
 background-color:var(--commen_red) ;
@@ -467,23 +515,32 @@ line-height: 1.125rem; /* 150% */
 
 
 .discount_box {
-  border-radius: 0.25rem;
-  background: var(--Secondary-2, #DB4444);
-  display: inline-flex;
+border-radius: 0.25rem;
+background: var(--Secondary-2, #DB4444);
+display: inline-flex;
 padding: 0.25rem 0.75rem;
 color: #FAFAFA;
 font-size: 0.75rem;
 font-style: normal;
 font-weight: 400;
 line-height: 1.125rem; /* 150% */
+
 }
 
 .product_card {
+  cursor: pointer;
   position: relative;
   border-radius: 0.25rem;
   height: 15.625rem;
   padding: 0.75rem;
   background-color:#F5F5F5;
+  transition: all 1s;
+  overflow: hidden;
+}
+.product_card:hover .product_card{
+  transition: all 1s;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .product_img {
   width: 10.75rem;
@@ -529,12 +586,17 @@ start the Category section
 */
 
 .category_box {
-  padding: 1.5625rem 3.5rem 1.5rem 3.4375rem;
+height: 9.0625rem;
+padding: 1rem;
   border-radius: 0.25rem;
 border: 1px solid rgba(0, 0, 0, 0.30);
 display: grid;
 place-items: center;
 gap: 1rem;
+}
+.category_box.active {
+  background-color: var(--commen_red);
+  color: white;
 }
 .category_img {
   width: 3.5rem;
@@ -572,11 +634,17 @@ line-height: 1.125rem;
 start the New Arrival section
 --------------------------------------------- 
 */
-
+@media (min-width:768px) {
+  .left_content,
+  .right_content {
+  padding-top: 5.56rem;
+  padding-inline: 1.88rem 1.81rem;
+  }
+}
 .left_content,
 .right_content {
-padding-top: 5.56rem;
-padding-inline: 1.88rem 1.81rem;
+padding-top: 3rem;
+padding-inline: 1rem;
 }
  .thub {
   position: relative;
@@ -660,7 +728,7 @@ line-height: 1.5rem; /* 150% */
 @media (min-width: 1440px) {
   .right-content {
     margin: auto;
-    max-width: 25%;
+    max-width: 30%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
@@ -682,14 +750,22 @@ line-height: 1.5rem; /* 150% */
   }
   
 }
+
 /* end register section */
 
 /* start Wishlist section */
 .outline_gray-button {
   border-radius: 0.25rem;
-border: 1px solid rgba(0, 0, 0, 0.50);
-padding: 1rem 3rem;
-background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.50);
+  background-color: transparent;
+  padding: 6px;
+  color: black;
+
+}
+@media (min-width:768px) {
+  .outline_gray-button {
+    padding: 1rem 3rem;
+  }
 }
 /* end Wishlist section */
 
@@ -896,6 +972,7 @@ text-decoration-line: underline;
 background: var(--Primary, #FFF);
 box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
 margin-left: auto;
+height: fit-content;
 }
 .Massage_area {
   padding: 1rem;
