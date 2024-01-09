@@ -552,7 +552,7 @@ line-height: 1.125rem; /* 150% */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .product_img {
-  width: 10.75rem;
+  max-width: 10.75rem;
    height: 9.5rem; 
    position: absolute ;
    top: 50%;
@@ -800,7 +800,9 @@ padding: 1.5rem;
   width: 3.5rem;
 
 }
-
+.coupon-input {
+  width: 100%;
+}
 @media (min-width:768px) {
   .cart-tabel {
     padding: 1.5rem 2.4375rem 1.5rem 2.5rem;
@@ -842,6 +844,11 @@ font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: 1.625rem; /* 162.5% */
+}
+@media (min-width:768px) {
+  .story-discrption {
+    padding-right:4.69rem ;
+  }
 }
 .states-card {
   padding: 1.875rem 0.25rem;
